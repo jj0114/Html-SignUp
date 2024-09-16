@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="circle"></div>
+                <span>Vogue Vibes</span>
+            </div>
+            <nav>
+                <a href="https://www.facebook.com/login/">Facebook</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.tiktok.com/">Tiktok</a>
+            </nav>
+        </div>
+        
+        <div class="form-box">
+            <p class="sub-title">START YOUR JOURNEY</p>
+            <h1>Sign up</h1>
+            <form>
+                <i class="bx bxs-user"></i>
+                <div class="input-group">
+                    <input type="text" placeholder="First name" class="input-field">
+                    <input type="text" placeholder="Last name" class="input-field">
+                </div>
+                <input type="email" placeholder="Email" class="input-field full-width">
+                <i class="bx bx-lock-alt"></i>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password" class="input-field full-width">
+                    <label class="password-toggle">
+                        <input type="checkbox" id="toggle-password">
+                        <i class="bx bx-show"></i> 
+                    </label>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn grey">Cancel</button>
+                    <button type="submit" class="btn blue">Create account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggle-password').addEventListener('change', function() {
+            const passwordField = document.getElementById('password');
+            if (this.checked) {
+                passwordField.type = 'text';
+                document.querySelector('.password-toggle i').classList.replace('bx-show', 'bx-hide');
+            } else {
+                passwordField.type = 'password';
+                document.querySelector('.password-toggle i').classList.replace('bx-hide', 'bx-show');
+            }
+        });
+    </script>
+</body>
+</html>
